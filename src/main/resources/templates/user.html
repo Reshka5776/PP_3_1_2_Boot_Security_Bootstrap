@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>User's page</title>
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+        <span class="navbar-brand mb-0 h2">
+            <strong><a th:text="${userPage.getEmail()}">${userPage.getEmail()</a></strong>
+            <span class="text-start">with roles:
+            <a th:each="role : ${userPage.getRoles()}" th:text="${role.getName()}"/></a></span>
+        </span>
+    <ul class="navbar-nav px-4">
+        <li class="nav-item text-nowrap">
+            <a class="nav-link" href="/logout">Logout</a>
+        </li>
+    </ul>
+</nav>
+<div class="container-fluid d-flex flex-column">
+    <div class="row" style="height:100vh;">
+        <div class="col-sm-2 mt-2 px-0 mr-4">
+            <nav class="d-none d-sm-block sidebar">
+                <div class="bg-light text-dark">
+                    <nav class="sidebar">
+                        <ul class="nav nav-pills flex-column">
+
+                            <li class="nav-item active">
+                                <a class="nav-link active" th:href="@{/user}">User</a>
+                            </li>
+                            <div sec:authorize="hasRole('ADMIN')">
+                                <li class="nav-item">
+                                    <a class="nav-link" th:href="@{/admin}">Admin</a>
+                                </li>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+        <div class="col-sm bg-light text-dark">
+            <h1 class="ml-3 mb-3 mt-3 font-bold">User information-page</h1>
+            <div class="bg-light border border-3 border-black rounded-top rounded-3">
+                <div class="h4 m-3 " id="home-tab" data-toggle="tab"
+                     aria-controls="home" aria-selected="true">About user
+                </div>
+                <div class="bg-white border border-3 border-black ">
+                    <div class="col mt-3">
+                        <table class="table table-striped bg-white text-dark">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>First name</th>
+                                <th>Last name</th>
+                                <th>Age</th>
+                                <th>Email</th>
+                                <th>Roles</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr th:object="${userPage}">
+                                <td th:text="${userPage.id}">ID</td>
+                                <td th:text="${userPage.firstName}">First name</td>
+                                <td th:text="${userPage.lastName}">Last name</td>
+                                <td th:text="${userPage.age}">Age</td>
+                                <td th:text="${userPage.email}">Email</td>
+                                <td>
+                                    <ul>
+                                        <li th:each="role : ${userPage.getRoles()}" th:text="${role.getName()}"></li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
