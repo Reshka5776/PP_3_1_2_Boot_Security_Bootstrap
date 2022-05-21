@@ -52,7 +52,7 @@ public class UserController {
 
     @PostMapping("/admin")
     public String createUser(@ModelAttribute("user") User user,
-                             @RequestParam(value = "roles") Set<String> roles) {
+                             @RequestParam(value = "roles", defaultValue = "ROLE_USER") Set<String> roles) {
         Set<Role> setRoles = roleService.getAllRoles(roles);
         user.setRoles(setRoles);
         userService.addUser(user);
@@ -74,7 +74,7 @@ public class UserController {
 
     @PatchMapping("/admin/{id}/edit")
     public String updateUser(@ModelAttribute User user,
-                             @RequestParam(value = "roles") Set<String> roles) {
+                             @RequestParam(value = "roles", defaultValue = "ROLE_USER") Set<String> roles) {
 
         Set<Role> setRoles = roleService.getAllRoles(roles);
         user.setRoles(setRoles);
