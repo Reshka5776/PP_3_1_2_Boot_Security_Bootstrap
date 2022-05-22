@@ -35,7 +35,7 @@ public class UserController {
         model.addAttribute("newUser", new User());
         model.addAttribute("roles", roleService.getAllUserRoles());
         //model.addAttribute("userById", userService.getUserById(id));
-        return "admin";
+        return "userslist";
     }
 //    @GetMapping("/admin")
 //    public String printUsers(Model model) {
