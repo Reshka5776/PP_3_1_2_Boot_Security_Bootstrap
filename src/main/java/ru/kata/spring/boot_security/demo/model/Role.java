@@ -42,7 +42,7 @@ public class Role implements GrantedAuthority {
 
     @Override
     public String toString() {
-        return this.name;
+        return name.replace("ROLE_", "");
     }
 
     public long getId() {

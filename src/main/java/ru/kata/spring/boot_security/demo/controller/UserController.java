@@ -37,18 +37,7 @@ public class UserController {
         //model.addAttribute("userById", userService.getUserById(id));
         return "admin";
     }
-//    @GetMapping("/admin")
-//    public String printUsers(Model model) {
-//        model.addAttribute("users", userService.getAllUsers());
-//        return "adminPage";
-//    }
 
-//    @GetMapping("/admin/new")
-//    public String createUserForm(Model model) {
-//        model.addAttribute("initUser", new User());
-//        model.addAttribute("roles", roleService.getAllUserRoles());
-//        return "admin";
-//    }
 
     @PostMapping("/admin")
     public String createUser(@ModelAttribute("user") User user,
