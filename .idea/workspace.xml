@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4dbcaa7-fc43-4a60-893d-424dd2a5096e" name="Changes" comment="ну и намучалась же я cнова)">
+    <list default="true" id="c4dbcaa7-fc43-4a60-893d-424dd2a5096e" name="Changes" comment="очередной апдейт">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/c5b06290-ee32-439b-af11-e3929e2bf3be.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c5b06290-ee32-439b-af11-e3929e2bf3be.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/kata/spring/boot_security/demo/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,12 +70,12 @@
     "RequestMappingsPanelWidth1": "75",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "C:/Users/A/IdeaProjects/PP_3_1_2_Boot_Security",
+    "last_opened_file_path": "C:/Users/A/IdeaProjects/PP_3_1_4_Boot_Security_Bootstrap_Rest_JS",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.19885057",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "7e3a243e66b01669507087d96c56f184"
+    "spring.configuration.checksum": "f3f4fe248f8698ce3a6b0564f3a66c40"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -85,6 +87,13 @@
       <recent name="ru.kata.spring.boot_security.demo.model" />
       <recent name="ru.kata.spring.boot_security.demo.controller" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.SpringBootSecurityDemoApplication (1)">
     <configuration name="SpringBootSecurityDemoApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -119,7 +128,8 @@
       <workItem from="1652878898282" duration="422000" />
       <workItem from="1652881547900" duration="1234000" />
       <workItem from="1652885808451" duration="74057000" />
-      <workItem from="1653047734702" duration="40165000" />
+      <workItem from="1653047734702" duration="42884000" />
+      <workItem from="1653224039954" duration="15902000" />
     </task>
     <task id="LOCAL-00001" summary="ну и намучалась же я)">
       <created>1652913423524</created>
@@ -142,7 +152,28 @@
       <option name="project" value="LOCAL" />
       <updated>1653099581653</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="убрала @Transactional из дао">
+      <created>1653215696480</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1653215696480</updated>
+    </task>
+    <task id="LOCAL-00005" summary="убрала @Transactional из дао">
+      <created>1653230356391</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1653230356391</updated>
+    </task>
+    <task id="LOCAL-00006" summary="очередной апдейт">
+      <created>1653240547072</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1653240547072</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +193,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ну и намучалась же я)" />
     <MESSAGE value="ну и намучалась же я cнова)" />
-    <option name="LAST_COMMIT_MESSAGE" value="ну и намучалась же я cнова)" />
+    <MESSAGE value="убрала @Transactional из дао" />
+    <MESSAGE value="очередной апдейт" />
+    <option name="LAST_COMMIT_MESSAGE" value="очередной апдейт" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

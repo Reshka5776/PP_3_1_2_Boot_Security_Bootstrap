@@ -15,14 +15,14 @@ import java.util.Set;
 
 @Controller
 @RequestMapping
-public class UserController {
+public class AdminUserController {
 
     private final UserService userService;
     private final UserDetailsServiceImpl userDetailsService;
     private final RoleService roleService;
 
     @Autowired
-    public UserController(UserService userService, UserDetailsServiceImpl userDetailService, RoleService roleService) {
+    public AdminUserController(UserService userService, UserDetailsServiceImpl userDetailService, RoleService roleService) {
         this.userService = userService;
         this.roleService = roleService;
         this.userDetailsService = userDetailService;
